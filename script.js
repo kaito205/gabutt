@@ -1,5 +1,9 @@
 const khodamNames = [
   "Ultraman Hijau",
+  "Ultraman Hijau",
+  "Ultraman Hijau",
+  "Rangger Pink",
+  "Rangger Pink",
   "Rangger Pink",
   "Ikan Kepala Ultraman",
   "Ikan Kepala Ultraman",
@@ -17,16 +21,16 @@ const khodamNames = [
   "Coba lagi",
   "lauk sepat",
   "ceker hayam",
-  "masa lalu mu!",
-  "masa lalu mu!",
-  "masa lalu mu!",
+  "Naga ompong!",
+  "kosong!",
+  "Simet!",
   "kosong!",
   "kosong!",
-  "kosong!",
-  "kosong!",
-  "kosong!",
-  "kosong!",
+  "congcorang!",
   "Bulu babi",
+  "Masa lalu",
+  "Masa lalu",
+  "Masa lalu",
   "Masa lalu",
   "Ayam Kampung",
   "kuda lumping",
@@ -34,11 +38,11 @@ const khodamNames = [
   "pocong tisoledat",
   "pocong tisoledat",
   "pocong tisoledat",
-  "sawah ngaralet",
+  "Belut sawah",
   "Neymar Bogor",
-  "Ikan Sepat",
+  "Lauk Sepat",
   "tunggir hayam",
-  "hulu lalay",
+  "Masa lalu!",
   "kunti beranak!",
   "kolor hejo!",
   "kolor hejo!",
@@ -62,14 +66,15 @@ function cekKhodam() {
   console.log(`Khodam yang muncul: ${randomKhodam}`);
 
   const resultContainer = document.getElementById("result");
-  resultContainer.innerHTML = `<h3 class="text-danger">Khodam anda : ${randomKhodam}</h3>`;
+  resultContainer.innerHTML = `<h6 class="text-danger">Khodam anda : ${randomKhodam}</h6>`;
 
   const inputNama = document.getElementById("nama");
   inputNama.value = "";
 }
 
-const form = document.getElementById("khodamForm");
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  cekKhodam();
-});
+document
+  .getElementById("khodamForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    cekKhodam();
+  });
